@@ -7,6 +7,9 @@
             <a href="#">LS2D</a>
           </p>
         </div>
+        <div class="navbar__menu">
+          <i class="fas fa-bars"></i>
+        </div>
         <ul class="navbar__links">
           <li class="navbar__link active" data-ref="home">
             <a href="#home">Inicio</a>
@@ -170,7 +173,7 @@
               <div class="buttons__container">
                 <a
                   class="button"
-                  href="https://jgestradam.github.io/Escuela-de-la-verdad/"
+                  href="http://sramos.ls2d.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -178,7 +181,7 @@
                 </a>
                 <a
                   class="button"
-                  href="http://sramos.ls2d.com"
+                  href="https://github.com/s-ramosm"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
