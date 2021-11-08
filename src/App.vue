@@ -21,7 +21,7 @@
   --grey: #414141;
   --red: 	#d62d20;
   --amarillo: #ffa700;
-  --blue:#3367d6;
+  --blue:#9e0000;
   --orange:#e34c26;
   --green:#008744;
   --blueReact: #61DBFB;
@@ -63,7 +63,8 @@ section {
 
 .navbar {
   position: fixed;
-  background: transparent;
+  /* background: transparent; */
+  background-color: #000000ca;
   transition: background 0.3s;
   display: flex;
   justify-content: space-between;
@@ -146,16 +147,26 @@ section {
   margin-right: 40px;
   transition: filter  3s;
 }
-
+.coder-img{
+  height: 400px;
+  margin-left: 50px;
+  transition: filter  3s;
+}
+.midiom{
+  margin: 0;
+}
 .home__title {
   font-size: 60px;
   text-shadow: 1px 1px black;
   color: var(--blue);
 }
+.home__description{
+  width: 50%;
+}
 
 .home__title--primary,
 .home__title--secondary {
-  font-size: 45px;
+  font-size: 25px;
   color: #f5f5f5;
   text-shadow: 1px 1px black;
 }
@@ -183,8 +194,8 @@ section {
 .about__description {
   text-align: left;
   color: var(--grey);
-  padding-right: 80px;
-  line-height: 40px;
+  /* padding-right: 80px; */
+  line-height: 30px;
 }
 
 .about__summary {
@@ -310,32 +321,36 @@ section {
   color: var(--grey);
 }
 
-.portfolio__grid {
+.team__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
 
-.portfolio__item {
+.team__item {
   background: white;
   position: relative;
   object-fit: cover;
   overflow: hidden;
   font-size: 14px;
   border-radius: 10px;
+  /* background-color: #008744; */
+  width: 100%;
+  /* height: 500px; */
 }
 
-.portfolio__img {
+.team__img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   display: block;
   transition: all 1s;
   border-radius: 10px;
-  max-height: 190px;
+  /* max-height: 190px; */
 }
 
-.portfolio__description {
+.team__description {
   padding: 50px;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
@@ -351,7 +366,7 @@ section {
   flex-direction: column;
 }
 
-.portfolio__item:hover .portfolio__description {
+.team__item:hover .team__description {
   visibility: visible;
   opacity: 1;
   transition: all 0.5s;
@@ -359,17 +374,17 @@ section {
   transform: translateY(-300px);
 }
 
-.portfolio__item:hover .portfolio__img {
+.team__item:hover .team__img {
   transition: all 1s;
   border-radius: 10px;
-  transform: scale(1.3);
+  /* transform: scale(1.3); */
 }
 
-.portfolio__description--title {
+.team__description--title {
   color: var(--white);
 }
 
-.portfolio__description--text {
+.team__description--text {
   margin: 20px 0;
 }
 
@@ -482,168 +497,4 @@ section {
 .footer a:hover {
   color: var(--blue);
 }
-
-/* @media (max-width: 991px) {
-
-
-
-  .navbar__menu {
-    display: flex;
-  }
-
-  .navbar__links {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.97);
-    font-size: 30px;
-    margin: 0 -20px;
-    z-index: 10;
-    transform: translateX(100%);
-    opacity: 0;
-    transition: all 0.5s;
-  }
-
-  .visible {
-    display: flex;
-    transform: translateX(0);
-    opacity: 1;
-    transition: all 0.5s;
-  }
-
-  .navbar__link {
-    padding-left: 0px;
-    margin-top: 30px;
-  }
-
-  section {
-    padding: 50px 0;
-  }
-
-  .home {
-    flex-direction: column;
-  }
-
-  .home__profile {
-    margin-bottom: 30px;
-    margin-right: 0;
-  }
-
-  .home__title {
-    font-size: 45px;
-  }
-
-  .home__title--primary,
-  .home__title--secondary {
-    font-size: 35px;
-  }
-
-  .section__title {
-    font-size: 25px;
-  }
-
-  .section__title:after {
-    width: 110px;
-    height: 3px;
-  }
-
-  .section__subtitle {
-    
-    font-weight: normal;
-  }
-
-  .about__description {
-    padding-right: 0px;
-  }
-
-  .about__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .skill__title {
-    grid-column: span 4;
-  }
-
-  .about__skills {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  .button--cta {
-    margin-bottom: 30px;
-  }
-
-  .services__item {
-    padding: 15px;
-  }
-
-  .services__item h3 {
-    margin-bottom: 5px;
-  }
-
-  .services__grid,
-  .portfolio__grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-
-  .home__background {
-    background-image: url(./assets/img/bg_responsive.webp);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-  }
-
-  section {
-    padding: 20px 0;
-  }
-
-  .home__profile {
-    margin-bottom: 30px;
-  }
-
-  .home__title {
-    font-size: 30px;
-  }
-
-  .home__title--primary,
-  .home__title--secondary {
-    font-size: 25px;
-  }
-
-  .skill__title {
-    grid-column: span 3;
-  }
-
-  .about__skills {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .skill__item {
-    font-size: 50px;
-    padding: 5px;
-    min-width: 75px;
-    height: 85px;
-  }
-
-  .services__grid,
-  .portfolio__grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-
-  .contact__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .contact__item {
-    padding: 18px;
-    border-radius: 10px;
-    transition: all 0.3s;
-  }
-} */
 </style>
